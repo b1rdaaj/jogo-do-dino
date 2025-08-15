@@ -17,5 +17,3 @@ function jump() {
 }
 
 document.addEventListener('keyup', handleKeyUp);
-
-//https://web.dio.me/lab/recriando-o-famoso-jogo-do-dinossauro-sem-internet/learning/5a924282-1582-42e9-8da0-a0f99b699dcb
