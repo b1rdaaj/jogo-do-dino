@@ -42,11 +42,19 @@ function createCactus () {
     cactus.classList.add('cactus');
     cactus.style.left = 1000 + 'px';
     background.appendChild(cactus);
+    let randomTime = Math.random () * 6000;
 
     let leftInterval = setInterval(() => {
-        cactusPosition -= 10; //velocidade que vai para a esquerda 
-        cactus.style.left = cactusPosition + 'px';
-    })
+        if (cactusPosition < -60) {
+            clearInterval(leftInterval);
+            background.removeChild(cactus);
+        } else {
+            cactusPosition -= 10; //velocidade que vai para a esquerda 
+            cactus.style.left = cactusPosition + 'px';
+        }
+    }, 20)
+    
+    setTimeout(createCactus, randomTime)
 
 }
 
